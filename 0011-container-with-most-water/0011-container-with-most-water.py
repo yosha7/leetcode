@@ -7,9 +7,9 @@ class Solution(object):
         while left<right:
                 area=(right-left)*min(height[left],height[right])
                 largest=max(largest,area)                
-                if height[left]<=height[right]:
+                if height[left]<height[right]:
                     left+=1
-                elif height[right]<height[left]:
+                else:
                     right-=1
         return largest
 
